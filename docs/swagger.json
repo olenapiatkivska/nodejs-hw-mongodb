@@ -371,7 +371,7 @@
           "Contacts"
         ],
         "summary": "Update an existing contact",
-        "operationId": "updateContact",
+        "operationId": "patchContact",
         "description": "Update an existing contact by ID",
         "security": [
           {
@@ -404,7 +404,7 @@
                   "phoneNumber": {
                     "description": "Contact's phone number",
                     "type": "string",
-                    "example": "+383333555888"
+                    "example": 383333555888
                   },
                   "email": {
                     "description": "Contact's email address",

@@ -1,7 +1,7 @@
 tags:
   - Contacts
 summary: Update an existing contact
-operationId: updateContact
+operationId: patchContact
 description: 'Update an existing contact by ID'
 security:
   - bearerAuth: []
@@ -12,7 +12,7 @@ parameters:
     schema:
       type: string
       example: '6728d296023542183d93b08e'
-      description: The ID of the contact to update
+      description: 'The ID of the contact to update'
 requestBody:
   content:
     multipart/form-data:
@@ -22,11 +22,11 @@ requestBody:
           name:
             description: "Contact's name"
             type: string
-            example: 'Lesya Ukrainka'
+            example: Lesya Ukrainka
           phoneNumber:
             description: "Contact's phone number"
             type: string
-            example: '+383333555888'
+            example: +383333555888
           email:
             description: "Contact's email address"
             type: string
@@ -49,7 +49,7 @@ requestBody:
             format: binary
 responses:
   '200':
-    description: Successfully patched a contact!
+    description: 'Successfully patched a contact!'
     content:
       application/json:
         schema:
