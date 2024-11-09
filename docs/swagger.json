@@ -463,7 +463,7 @@
                     },
                     "data": {
                       "type": "object",
-                      "$ref": "#/components/schemas/contact"
+                      "$ref": "#/components/schemas/updateContact"
                     }
                   }
                 }
@@ -544,6 +544,55 @@
           "contactType",
           "userId"
         ],
+        "properties": {
+          "_id": {
+            "description": "Contact's id",
+            "type": "string",
+            "example": "6728d296023542183d93b08e"
+          },
+          "name": {
+            "description": "Contact's name",
+            "type": "string",
+            "example": "Lesya Ukrainka"
+          },
+          "phoneNumber": {
+            "description": "Contact's phone number",
+            "type": "string",
+            "example": "+383333555888"
+          },
+          "email": {
+            "description": "Contact's email address",
+            "type": "string",
+            "example": "lesya@mail.com"
+          },
+          "isFavourite": {
+            "description": "Is the contact a favorite",
+            "type": "boolean",
+            "example": false
+          },
+          "contactType": {
+            "description": "Contact's type",
+            "type": "string",
+            "enum": [
+              "work",
+              "home",
+              "personal"
+            ]
+          },
+          "userId": {
+            "description": "User's id",
+            "type": "string",
+            "example": "65e4decdd286b30065d54af9"
+          },
+          "photo": {
+            "description": "Link to contact's photo",
+            "type": "string",
+            "example": "https://res.cloudinary.com/uqwgdu/image/upload/image.png"
+          }
+        }
+      },
+      "updateContact": {
+        "type": "object",
         "properties": {
           "_id": {
             "description": "Contact's id",
