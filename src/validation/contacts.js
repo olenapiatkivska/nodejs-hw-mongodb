@@ -30,6 +30,13 @@ export const createContactSchema = Joi.object({
       'string.min': 'Contact type must be at least 3 characters long',
       'string.max': 'Contact type must be at most 20 characters long',
     }),
+  userId: Joi.string().messages({
+    'string.base': 'User ID should be a string',
+    'string.empty': 'User ID should not be empty',
+  }),
+  photo: Joi.string().uri().messages({
+    'string.base': 'Photo should be a valid URI',
+  }),
 });
 
 export const updateContactSchema = Joi.object({
@@ -60,4 +67,11 @@ export const updateContactSchema = Joi.object({
       'string.min': 'Contact type must be at least 3 characters long',
       'string.max': 'Contact type must be at most 20 characters long',
     }),
+  userId: Joi.string().messages({
+    'string.base': 'User ID should be a string',
+    'string.empty': 'User ID should not be empty',
+  }),
+  photo: Joi.string().uri().messages({
+    'string.base': 'Photo should be a valid URI',
+  }),
 });
