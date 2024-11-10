@@ -16,16 +16,5 @@ parameters:
 responses:
   '204':
     description: 'No Content'
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            status:
-              type: integer
-              example: 204
-            message:
-              type: string
-              example: No Content
   '404':
     $ref: ../../../components/responses/404.yaml

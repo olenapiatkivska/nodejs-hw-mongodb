@@ -21,7 +21,7 @@ parameters:
     schema:
       type: string
       example: 'name'
-    description: 'Field by which to sort the contacts. Default value - _id'
+    description: 'Field by which to sort the contacts.'
   - in: query
     name: sortOrder
     schema:
@@ -30,33 +30,17 @@ parameters:
       example: 'asc'
       description: 'Order of sorting: "asc" for ascending or "desc" for descending. Default is "asc".'
   - in: query
-    name: name
-    schema:
-      type: string
-      example: 'Slava'
-  - in: query
-    name: phoneNumber
-    schema:
-      type: string
-      example: '+383333555888'
-  - in: query
-    name: email
-    schema:
-      type: string
-      example: 'maria@mail.com'
-  - in: query
     name: isFavourite
     schema:
       type: boolean
       example: true
       default: false
   - in: query
-    name: contactType
+    name: type
     schema:
       type: string
       enum: ['work', 'home', 'personal']
-      example: home
-      default: 'personal'
+      example: 'personal'
 responses:
   '200':
     description: Successfully found contacts!
